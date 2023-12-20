@@ -11,7 +11,7 @@ export const products = [
         id: '8O3N7-W36U9-12YYS-C21V1'
     },
     {
-        image: 'products_image/cx_750.jpg',
+        image: 'products_image/gskill_tridentz.jpg',
         name: 'Corsair Powersupply',
         review:{
             stars: 3.0,
@@ -21,7 +21,7 @@ export const products = [
         id: '8O3N7-W36U9-12YYS-C21V2'
     },
     {
-        image: 'products_image/asus_x670_motherboard.jpg',
+        image: 'products_image/razerviper.jpg',
         name: 'Asus X570 Motherboard',
         review:{
             stars: 4.5,
@@ -32,13 +32,13 @@ export const products = [
     },
 
     {
-        image: 'products_image/asus_x670_motherboard.jpg',
-        name: 'Asus X570 Motherboard',
+        image: 'products_image/rtx_4090.jpg',
+        name: 'Nvidia RTX 4090 TI',
         review:{
             stars: 4.5,
             count: 66
         },
-        price: '45,000.00',
+        price: '1,45,000.00',
         id: '8O3N7-W36U9-12YYS-C21V4'
     },
 
