@@ -105,8 +105,31 @@
     margin-top: 0px;
    display: flex;
    align-items: center;
+  position: relative;
+
+
   
+}
+
+
+.profile-pop{
+    opacity: 0;
+    background-color: blueviolet;
+    position: absolute;
+    margin-top: 378px;
+    width: 140px;
+    height: 300px;
+    transition: opacity ease-in-out .6s;
   
+}
+
+
+.profile:hover{
+    .profile-pop{
+        opacity: 100%;
+        transition: opacity ease-in-out .3s;
+    }
+
 }
 
 .profile img{
