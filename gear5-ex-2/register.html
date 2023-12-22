@@ -21,29 +21,26 @@
         <div class="login-container">
             <h1>Register</h1>
             <!-- <div class="login-input"> -->
-                <form action="url" method="GET">
+                <form action="backend/register.php" method="POST" enctype="application/x-www-form-urlencoded">
                     <div class="namex input-details">
-                        <input class="name fname" type="fname" placeholder="First name">
-                        <input class="name lname" type="email" placeholder="Last name">
+                        <input class="name fname" type="fname" placeholder="First name" name="pfname">
+                        <input class="name lname" type="email" placeholder="Last name" name="plname">
                         <i class='bx bxs-user'></i>
                     </div>
 
                     <div class="input-details emailX">
-                        <input type="email" placeholder="Email">
-                       <i class='bx bxs-envelope'></i>
+                        <input type="email" placeholder="Email" name="pemail">
+                        <i class='bx bxs-envelope'></i>
                     </div>
                     <div class="input-details passX">
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" name="ppass">
                         <i class='bx bxs-lock' ></i>
                     </div>
                     <div class="login-submit">
-                         <button type="submit">Submit</button>
+                        <button type="submit">Register</button>
                     </div>
-        
                 </form>
             <!-- </div> -->
-            
-    
             <div class="login">
                 Already have an account?
                 <a href="login.html">Login</a>
