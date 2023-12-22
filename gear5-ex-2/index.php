@@ -1,3 +1,34 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "shree";
+
+    $conn = new mysqli($servername, $username, $password);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "USE gear5";
+    if ($conn->query($sql) === TRUE) {
+        echo "<script>console.log('Database connected successfully');</script>";
+    }
+    else {
+        echo "<script>console.log('Error: " . $sql . "<br>" . $conn->error."');</script>";
+    }
+
+    $email = urldecode($_COOKIE['email']);
+    echo "<script>console.log('".$email."');</script>";
+
+    $sql = "select fname, lname from users where email = '".$email."';";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<script>const fname = '".$row['fname']."';</script>";
+            echo "<script>const lname = '".$row['lname']."';</script>";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,6 +136,9 @@
     <footer>
         <div>Sell Your Kidneys Before Adding Anything Into Cart.</div>
     </footer>
-    
+    <script>
+        const greet = "Hi, ";
+        document.querySelector('.profile-greet').innerHTML = greet.concat(fname, " ", lname);
+    </script>
 </body>
 </html>
