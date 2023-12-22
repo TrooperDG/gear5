@@ -41,19 +41,16 @@ body{
 h1{
     font-size:38px ;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .input-details{
 
     position: relative;
-   
-    margin-top: 30px;
+    margin-top: 20px;
     height: 45px;
-   
+
 }
-
-
 
 .input-details input{
     width: 100%;
@@ -68,9 +65,29 @@ h1{
     
 }
 
+.namex {
+    display: inline-block;
+    position: relative;
+    display: flex;
+}
 
+.namex .name {
+    flex: 1;
+}
 
+.namex .fname {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: 0;
+}
+.namex .lname {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
 
+.namex i {
+    position: absolute;
+}
 
 .input-details i{
     font-size: 25px;
@@ -79,34 +96,8 @@ h1{
     right: 20px;
 }
 
-.remember-forgot-password{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
- 
-}
-.remember-forgot-password label{
-    cursor: pointer;
-}
-.remember-forgot-password label input{
-    accent-color: rgb(255, 255, 255);
-    margin-right: 4px;
-    cursor: pointer;
-}
-
-.remember-forgot-password a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-.remember-forgot-password a:hover{
-    text-decoration: underline;
-}
-
-
 .login-submit{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .login-submit button{
@@ -121,19 +112,19 @@ h1{
     color: white;
 }
 
-.register{
+.login{
     margin-top: 20px;
     text-align: center;
     font-size: 15px;
 
 }
 
-.register a{
+.login a{
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
 
-.register a:hover{
+.login a:hover{
     text-decoration: underline;
 }

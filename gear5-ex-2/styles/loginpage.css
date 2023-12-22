@@ -16,7 +16,6 @@ body{
 
 .login-wrapper{
     /* background-color: rgb(255, 255, 255); */
-   
 }
 
 .login-logo{
@@ -41,16 +40,15 @@ body{
 h1{
     font-size:38px ;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .input-details{
 
     position: relative;
-   
-    margin-top: 30px;
+    margin-top: 20px;
     height: 45px;
-   
+
 }
 
 .input-details input{
@@ -74,19 +72,28 @@ h1{
     right: 20px;
 }
 
+.remember-box {
+    width: 15px;
+    height: auto;
+}
+
 .remember-forgot-password{
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     font-size: 15px;
- 
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .remember-forgot-password label{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 .remember-forgot-password label input{
-    accent-color: rgb(255, 255, 255);
-    margin-right: 4px;
+    border: none;
+    margin-right: 10px;
+    accent-color: rgb(159, 159, 159);
     cursor: pointer;
 }
 
@@ -100,8 +107,9 @@ h1{
 }
 
 
+
 .login-submit{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .login-submit button{
