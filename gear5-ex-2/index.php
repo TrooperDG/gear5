@@ -15,16 +15,16 @@
     else {
         echo "<script>console.log('Error: " . $sql . "<br>" . $conn->error."');</script>";
     }
-
-    $email = urldecode($_COOKIE['email']);
-    echo "<script>console.log('".$email."');</script>";
-
-    $sql = "select fname, lname from users where email = '".$email."';";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "<script>const fname = '".$row['fname']."';</script>";
-            echo "<script>const lname = '".$row['lname']."';</script>";
+    if (isset($_COOKIE['token'])) {
+        $token = urldecode($_COOKIE['token']);
+        echo "<script>console.log('".$token."');</script>";
+        $sql = "select fname, lname from users where token = '".$token."';";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<script>const fname = '".$row['fname']."';</script>";
+                echo "<script>const lname = '".$row['lname']."';</script>";
+            }
         }
     }
 ?>
@@ -77,7 +77,7 @@
                 
             </div> 
             <div class="profile">
-                <div class="profile-greet">Hi, Ussop</div>
+                <div class="profile-greet"></div>
                 <img src="profile img/fb4342e0ac4a24cf8c08d0031174e228.jpg" alt="">
 
                 <div class="profile-pop profile-pop-js">hi</div>
@@ -137,8 +137,15 @@
         <div>Sell Your Kidneys Before Adding Anything Into Cart.</div>
     </footer>
     <script>
-        const greet = "Hi, ";
-        document.querySelector('.profile-greet').innerHTML = greet.concat(fname, " ", lname);
+        let account_name = "Hello,<br>";
+        try {
+            account_name = account_name.concat(fname, " ", lname);
+        }
+        catch (e) {
+            account_name = account_name.concat("", "sign in");
+        }
+        console.log(account_name);
+        document.querySelector('.profile-greet').innerHTML = account_name;
     </script>
 </body>
 </html>

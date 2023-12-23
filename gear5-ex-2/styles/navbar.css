@@ -65,8 +65,7 @@
 
 .search-bar{
 
-    height: 34px;
-   
+    height: 40px;
     border: 2px solid rgb(149, 149, 149);
 
     border-bottom-left-radius: 7px;
@@ -103,12 +102,9 @@
     color: aliceblue;
     margin-left: 30px;
     margin-top: 0px;
-   display: flex;
-   align-items: center;
-  position: relative;
-
-
-  
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 
@@ -120,7 +116,6 @@
     width: 140px;
     height: 300px;
     transition: opacity ease-in-out .6s;
-  
 }
 
 
@@ -142,13 +137,12 @@
 .profile-greet{
     font-family: roboto;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     
 }
 
 .cart-img{
     width: 50px;
-   
     margin-top: 5px;
     /* background-color: blue; */
     
@@ -156,7 +150,7 @@
 .cart{
     /* background-color: aqua; */
     position: relative;
-     margin-left: 15px;
+    margin-left: 15px;
     
     
 }
@@ -174,7 +168,5 @@
     right: 8px;
     left: 18px;
     text-align: center;
-
-    
 }
 

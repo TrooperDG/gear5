@@ -20,8 +20,8 @@
         $lname = $_POST['plname'];
         $email = $_POST['pemail'];
         $pass = $_POST['ppass'];
-
-        $sql = "insert into users (fname, lname, email, password) VALUES ('".$fname."', '".$lname."', '".$email."', '".$pass."');";
+        $token = bin2hex(random_bytes(20));
+        $sql = "insert into users (fname, lname, email, password, token) VALUES ('".$fname."', '".$lname."', '".$email."', '".$pass."', '".$token."');";
 
         if ($conn->query($sql) === TRUE) {
             echo "<script>console.log('User added.');</script>";
@@ -30,9 +30,8 @@
             echo "<script>console.log('Error: " . $sql . "<br>" . $conn->error."');</script>";
         }
         
-        setcookie("email", $email, time() + (86400 * 30), "/");
-
-        header("Location: http://localhost/gear5/gear5-ex-2/");
-        die();
+        setcookie("token", $token, time() + (86400 * 30), "/");
     }
+    header("Location: http://localhost/gear5/gear5-ex-2/");
+    die();
 ?>
