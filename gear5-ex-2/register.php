@@ -1,3 +1,10 @@
+<?php
+    if (isset($_COOKIE['token'])) {
+        header("Location: http://localhost/gear5/gear5-ex-2/");
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
