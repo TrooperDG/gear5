@@ -34,7 +34,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gear5_Home</title>
+    <title>Gear5</title>
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/products.css">
@@ -71,7 +71,6 @@
             <div class="cart">
                     <a href="cart-checkout.html">
                         <img class="cart-img" src="page_images/cart last-01.png" alt="">
-
                         <div class="cart-value js-cart-value">0</div>
                     </a>
                 
@@ -79,10 +78,8 @@
             <div class="profile">
                 <div class="profile-greet"></div>
                 <img src="profile img/fb4342e0ac4a24cf8c08d0031174e228.jpg" alt="">
-
-                <div class="profile-pop profile-pop-js">hi</div>
+                <div class="profile-pop profile-pop-js"><a href="backend/logout.php">Logout</a></div>
             </div>
-
         </div>
     </div>
 

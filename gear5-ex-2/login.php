@@ -36,7 +36,8 @@
                     <div class="error-box">
                     </div>
 
-                    <?php
+<?php
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $servername = "localhost";
         $username = "root";
