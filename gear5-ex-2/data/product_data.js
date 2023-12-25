@@ -1,4 +1,4 @@
-export const products = [
+export const productss = [
     {
         image: 'products_image/asus_x670_motherboard.jpg',
         name: 'Asus X570 Motherboard',

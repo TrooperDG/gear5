@@ -3,6 +3,6 @@
         unset($_COOKIE['token']); 
         setcookie('token', '', -1, '/'); 
     }
-    header("Location: http://localhost/gear5/gear5-ex-2/");
+    header("Location: ../");
     die();
 ?>

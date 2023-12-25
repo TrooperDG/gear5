@@ -2,7 +2,7 @@ import os, random, string, pymysql
 
 con = pymysql.connect(host="localhost", user="root", password="shree", database="gear5")
 cur = con.cursor()
-path = "C:\\Personal Files\\RoadToDev\\xampp\\htdocs\\gear5\\gear5-ex-2\\products_image"
+path = "C:\\Personal Files\\RoadToDev\\xampp\\htdocs\\gear5\\gear5-ex-2\\product_images"
 os.chdir(path)
 files = os.listdir(path)
 for image in files:

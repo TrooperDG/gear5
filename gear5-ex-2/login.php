@@ -1,6 +1,6 @@
 <?php
     if (isset($_COOKIE['token'])) {
-        header("Location: http://localhost/gear5/gear5-ex-2/");
+        header("Location: /gear5/gear5-ex-2");
         die();
     }
 ?>
@@ -79,7 +79,7 @@
                     echo "<script>console.log('Error: " . $sql . "<br>" . $conn->error."');</script>";
                 }
                 setcookie("token", $token, time() + (86400 * 30), "/");
-                header("Location: http://localhost/gear5/gear5-ex-2/");
+                header("Location: /gear5/gear5-ex-2/");
                 die();
             }
         }
@@ -94,7 +94,7 @@
             <!-- </div> -->
             <div class="register">
                 Don't have an account?
-                <a href="register.html">Register now</a>
+                <a href="register.php">Register now</a>
             </div>
         </div>
     </div>

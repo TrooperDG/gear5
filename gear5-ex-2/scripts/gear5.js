@@ -1,7 +1,14 @@
-import {products} from '../data/product_data.js';
+
 import {cart} from '../data/cart.js';
 
+let products = [];
+const request = new XMLHttpRequest();
+request.open("GET", "../gear5-ex-2/backend/load_products.php", false);
+request.send(null);
 
+if (request.status === 200) {
+    products = JSON.parse(request.responseText);
+}
 
 let productsHTML = '';
 
@@ -19,9 +26,9 @@ products.forEach(product => {
                 <div class="product-review">
 
                     <div class="product-review-stars">
-                        <img src="ratings/rating-${product.review.stars *10}.png" alt="">
+                        <img src="ratings/rating-${product.review_stars *10}.png" alt="">
                     </div>
-                    <div class="product-review-count">${product.review.count} </div>
+                    <div class="product-review-count">${product.review_count} </div>
 
                 </div>
                 <div class= "product-price-container">
@@ -32,20 +39,13 @@ products.forEach(product => {
                 <button class="addToCart-button js-addToCart-button"  data-product-id="${product.id}">Add To Cart</button>
             </div>
         </div>
-         
-
-</div>
-
-    `
+</div>`
 
     document.querySelector('.js-product-container')
     .innerHTML= productsHTML;
 });
 
-
-
-document.querySelectorAll('.js-addToCart-button')
-    .forEach((button) =>{
+document.querySelectorAll('.js-addToCart-button').forEach((button) =>{
         button.addEventListener('click', ()=>{
             // console.log('Added Product');
             // console.log(button.dataset.productId)

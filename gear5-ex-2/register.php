@@ -1,6 +1,6 @@
 <?php
     if (isset($_COOKIE['token'])) {
-        header("Location: http://localhost/gear5/gear5-ex-2/");
+        header("Location: /gear5/gear5-ex-2/");
         die();
     }
 ?>
@@ -80,7 +80,7 @@
             }
             
             setcookie("token", $token, time() + (86400 * 30), "/");
-            header("Location: http://localhost/gear5/gear5-ex-2/");
+            header("Location: /gear5/gear5-ex-2/");
             die();
         }
         catch (Exception $e) {
@@ -96,7 +96,7 @@
             <!-- </div> -->
             <div class="login">
                 Already have an account?
-                <a href="login.html">Login</a>
+                <a href="login.php">Login</a>
             </div>
         </div>
     </div>
